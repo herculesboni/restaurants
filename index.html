@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>РЕСТАРАНТС</title>
     <style>
         * {
@@ -627,90 +627,170 @@
             margin: 30px 0;
         }
         
-        /* Адаптивность - полная */
+        /* Адаптивность - улучшенная для мобильных */
         @media (max-width: 768px) {
             .slide {
-                padding: 40px 25px;
+                padding: 30px 20px;
             }
             
             h1 { 
-                font-size: 3.5rem; 
+                font-size: 3rem; 
             }
             
             h2 { 
-                font-size: 2rem; 
+                font-size: 1.8rem; 
                 margin-bottom: 30px; 
             }
             
             .big-statement { 
-                font-size: 1.6rem; 
+                font-size: 1.4rem; 
                 margin-bottom: 30px; 
+                line-height: 1.4;
             }
             
             .problem-list { 
-                font-size: 1.3rem; 
+                font-size: 1.2rem; 
             }
             
             .problems-visual,
             .grid-2,
             .grid-3,
             .scenarios,
-            .options {
+            .options,
+            .financial-grid,
+            .marketing-strategy {
                 grid-template-columns: 1fr;
                 flex-direction: column;
                 gap: 20px;
             }
             
             .demo-restaurants {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 gap: 12px;
             }
             
             .demo-search input {
                 font-size: 16px; /* Предотвращает зум на iOS */
+                padding: 12px 16px;
             }
             
             .solution-demo {
-                padding: 25px;
+                padding: 20px;
+                max-width: 100%;
             }
             
             .nav {
                 bottom: 20px;
-                padding: 10px 20px;
-                gap: 10px;
+                padding: 10px 16px;
+                gap: 8px;
             }
             
             .nav-dot {
-                width: 12px;
-                height: 12px;
+                width: 10px;
+                height: 10px;
+            }
+            
+            /* Модальное окно для мобильных */
+            #restaurantModal {
+                padding: 20px;
+            }
+            
+            #restaurantModal > div {
+                padding: 20px;
+                margin: 0;
+                border-radius: 15px;
+                max-height: 90vh;
+            }
+            
+            #modalContent > div {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .demo-tag {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+            
+            .card,
+            .revenue-card,
+            .scenario,
+            .competitor {
+                padding: 20px;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .card-content {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .number-big {
+                font-size: 2rem;
+            }
+            
+            .contact-section {
+                padding: 30px 20px;
+                margin: 0;
+                max-width: 100%;
+            }
+            
+            .competitors-simple {
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
         }
         
         @media (max-width: 480px) {
             .slide {
-                padding: 30px 20px;
+                padding: 20px 15px;
             }
             
             h1 { 
-                font-size: 2.8rem; 
+                font-size: 2.2rem; 
+                line-height: 1.1;
             }
             
             h2 { 
-                font-size: 1.6rem; 
-                margin-bottom: 25px; 
+                font-size: 1.5rem; 
+                margin-bottom: 20px; 
             }
             
             .big-statement { 
-                font-size: 1.3rem; 
+                font-size: 1.2rem; 
+                line-height: 1.3;
             }
             
-            .problem-list { 
-                font-size: 1.1rem; 
+            .subtitle {
+                font-size: 1.2rem;
             }
             
-            .card,
-            .scenario {
-                padding: 20px;
+            .demo-restaurants {
+                gap: 10px;
+            }
+            
+            .demo-restaurant {
+                padding: 15px;
+            }
+            
+            .demo-name {
+                font-size: 1rem;
+            }
+            
+            .demo-info {
+                font-size: 0.8rem;
+            }
+            
+            .solution-demo {
+                padding: 15px;
+            }
+            
+            .demo-search input {
+                font-size: 16px;
+                padding: 10px 15px;
             }
             
             .card-title {
@@ -722,24 +802,106 @@
             }
             
             .number-big {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
             
-            .demo-restaurant {
-                padding: 12px;
-            }
-            
-            .solution-demo {
-                padding: 20px;
+            .scenario-revenue {
+                font-size: 1.8rem;
             }
             
             .contact-section {
-                padding: 30px;
-                margin: 0 10px;
+                padding: 25px 15px;
             }
             
-            .competitors-simple {
-                grid-template-columns: 1fr;
+            .contact-name {
+                font-size: 2rem;
+            }
+            
+            /* Улучшенная модалка для маленьких экранов */
+            #restaurantModal {
+                padding: 10px;
+            }
+            
+            #restaurantModal > div {
+                padding: 15px;
+                max-height: 95vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            #modalTitle {
+                font-size: 1.5rem;
+            }
+            
+            #modalContent h4 {
+                font-size: 1.1rem;
+            }
+            
+            #modalContent p {
+                font-size: 0.9rem;
+            }
+            
+            .nav {
+                bottom: 15px;
+                padding: 8px 12px;
+                gap: 6px;
+            }
+            
+            .nav-dot {
+                width: 8px;
+                height: 8px;
+            }
+        }
+        
+        /* Очень маленькие экраны */
+        @media (max-width: 320px) {
+            .slide {
+                padding: 15px 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            .big-statement {
+                font-size: 1rem;
+            }
+            
+            .demo-restaurants {
+                gap: 8px;
+            }
+            
+            .demo-restaurant {
+                padding: 10px;
+            }
+            
+            .solution-demo {
+                padding: 10px;
+            }
+        }
+        
+        /* Landscape мобильных */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .slide {
+                padding: 20px 15px;
+                justify-content: flex-start;
+                padding-top: 40px;
+            }
+            
+            h2 {
+                margin-bottom: 20px;
+            }
+            
+            .big-statement {
+                margin-bottom: 20px;
+            }
+            
+            .nav {
+                bottom: 10px;
             }
         }
         
@@ -753,14 +915,66 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Hover эффекты для мобильных */
-        @media (hover: none) {
+        /* Touch-friendly стили */
+        .demo-restaurant,
+        .card,
+        .scenario,
+        .competitor,
+        .option,
+        .nav-dot,
+        .demo-tag,
+        .cta,
+        button {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Улучшенные hover эффекты для мобильных */
+        @media (hover: none) and (pointer: coarse) {
             .demo-restaurant:hover,
             .card:hover,
             .scenario:hover,
-            .nav-dot:hover {
+            .nav-dot:hover,
+            .competitor:hover {
                 transform: none;
                 background: inherit;
+            }
+            
+            .demo-restaurant:active,
+            .card:active,
+            .scenario:active,
+            .competitor:active {
+                transform: scale(0.98);
+                opacity: 0.8;
+            }
+            
+            .nav-dot {
+                min-width: 44px;
+                min-height: 44px;
+                width: 14px;
+                height: 14px;
+            }
+            
+            .demo-tag {
+                min-width: 44px;
+                min-height: 44px;
+                padding: 10px 15px;
+            }
+        }
+        
+        /* Специально для iOS */
+        @supports (-webkit-touch-callout: none) {
+            .slide {
+                -webkit-text-size-adjust: none;
+            }
+            
+            input {
+                -webkit-appearance: none;
+                border-radius: 0;
+            }
+            
+            button {
+                -webkit-appearance: none;
             }
         }
     </style>
@@ -883,13 +1097,13 @@
                 </div>
                 
                 <!-- Полная карточка ресторана -->
-                <div id="restaurantModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; padding: 40px;">
-                    <div style="max-width: 800px; margin: 0 auto; background: #000; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 40px; height: 100%; overflow-y: auto;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                            <h3 id="modalTitle" style="font-size: 2rem; font-weight: 300;"></h3>
-                            <button onclick="closeRestaurantModal()" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 10px 20px; border-radius: 10px; cursor: pointer;">← Назад</button>
+                <div id="restaurantModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.95); z-index: 1000; padding: 20px; overflow-y: auto; -webkit-overflow-scrolling: touch;">
+                    <div style="max-width: 800px; margin: 0 auto; background: #000; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 30px; min-height: auto; position: relative;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                            <h3 id="modalTitle" style="font-size: 1.8rem; font-weight: 300; flex: 1; min-width: 200px;"></h3>
+                            <button onclick="closeRestaurantModal()" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-size: 1rem; min-width: 80px; touch-action: manipulation;">← Назад</button>
                         </div>
-                        <div id="modalContent">
+                        <div id="modalContent" style="line-height: 1.6;">
                             <!-- Контент карточки -->
                         </div>
                     </div>
@@ -987,7 +1201,7 @@
             <div class="highlight" style="margin-top: 40px;">
                 <div style="font-size: 1.3rem; font-weight: 500; margin-bottom: 15px;">Принцип чистоты</div>
                 <div style="font-size: 1.1rem; line-height: 1.5;">
-                  <br>
+                    Мы НЕ берем деньги за отзывы.<br>
                     Только плата ресторанов за доступ к подготовленной аудитории.
                 </div>
             </div>
@@ -1224,14 +1438,13 @@
 
         <!-- Слайд 10: Контакты -->
         <div class="slide">
-            <h2></h2>
+            <h2>Запуск</h2>
             <div class="contact-section">
                 <div class="contact-name">[Igor Pivinskii]</div>
                 <div class="contact-title">Основатель РЕСТАРАНТС</div>
                 
                 <div class="contact-list">
-                
-                    <div>💬 [Isgidur]</div>
+                    <div>💬 Isgidur</div>
                 </div>
                 
                 <button class="cta" onclick="finalCTA()">Обсудить партнерство</button>
