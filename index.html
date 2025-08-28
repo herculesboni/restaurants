@@ -915,66 +915,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Touch-friendly стили */
-        .demo-restaurant,
-        .card,
-        .scenario,
-        .competitor,
-        .option,
-        .nav-dot,
-        .demo-tag,
-        .cta,
-        button {
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        /* Улучшенные hover эффекты для мобильных */
-        @media (hover: none) and (pointer: coarse) {
+        /* Hover эффекты для мобильных */
+        @media (hover: none) {
             .demo-restaurant:hover,
             .card:hover,
             .scenario:hover,
-            .nav-dot:hover,
-            .competitor:hover {
+            .nav-dot:hover {
                 transform: none;
                 background: inherit;
-            }
-            
-            .demo-restaurant:active,
-            .card:active,
-            .scenario:active,
-            .competitor:active {
-                transform: scale(0.98);
-                opacity: 0.8;
-            }
-            
-            .nav-dot {
-                min-width: 44px;
-                min-height: 44px;
-                width: 14px;
-                height: 14px;
-            }
-            
-            .demo-tag {
-                min-width: 44px;
-                min-height: 44px;
-                padding: 10px 15px;
-            }
-        }
-        
-        /* Специально для iOS */
-        @supports (-webkit-touch-callout: none) {
-            .slide {
-                -webkit-text-size-adjust: none;
-            }
-            
-            input {
-                -webkit-appearance: none;
-                border-radius: 0;
-            }
-            
-            button {
-                -webkit-appearance: none;
             }
         }
     </style>
@@ -1217,9 +1165,9 @@
             <div class="scenarios" style="margin-bottom: 30px;">
                 <div class="scenario conservative" onclick="showFinancialBreakdown(this, 'month6')">
                     <div class="scenario-label">Месяц 6</div>
-                    <div class="scenario-number">5</div>
+                    <div class="scenario-number">10</div>
                     <div class="scenario-restaurants">ресторанов</div>
-                    <div class="scenario-revenue">125k ₽</div>
+                    <div class="scenario-revenue">250k ₽</div>
                     <div style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">
                         доход в месяц
                     </div>
@@ -1227,9 +1175,9 @@
                 
                 <div class="scenario realistic" onclick="showFinancialBreakdown(this, 'month12')">
                     <div class="scenario-label">Месяц 12</div>
-                    <div class="scenario-number">10</div>
+                    <div class="scenario-number">15</div>
                     <div class="scenario-restaurants">ресторанов</div>
-                    <div class="scenario-revenue">250k ₽</div>
+                    <div class="scenario-revenue">375k ₽</div>
                     <div style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">
                         доход в месяц
                     </div>
@@ -1438,13 +1386,14 @@
 
         <!-- Слайд 10: Контакты -->
         <div class="slide">
-            <h2>Запуск</h2>
+            <h2>Запуск/h2>
             <div class="contact-section">
                 <div class="contact-name">[Igor Pivinskii]</div>
                 <div class="contact-title">Основатель РЕСТАРАНТС</div>
                 
                 <div class="contact-list">
-                    <div>💬 Isgidur</div>
+                    <div>📱 [Telegram: Isgidur]</div>
+                   
                 </div>
                 
                 <button class="cta" onclick="finalCTA()">Обсудить партнерство</button>
